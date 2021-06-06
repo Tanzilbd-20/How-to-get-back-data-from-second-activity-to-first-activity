@@ -25,7 +25,7 @@ public class User_Data extends AppCompatActivity {
         textView.setText("Name : "+name+"\nAge : "+age+"\nGender : "+gender);
 
         textView.setOnClickListener(view -> {
-            Intent intent = new Intent(User_Data.this, MainActivity.class);
+            Intent intent = getIntent();
             intent.putExtra("message_back","This is from Second Activity");
             setResult(RESULT_OK,intent);
             finish();
